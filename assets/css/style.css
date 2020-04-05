@@ -1,0 +1,18 @@
+html *{
+    font-family: 'Montserrat', sans-serif;
+}
+#main{
+    padding-top: 3em;
+    background: #EEEEEE;
+}
+/* Header */
+header a{
+    color:#f7f7f7 !important;
+}
+/* Logo do navbar */
+.navbar-brand img{
+    max-height: 35px;
+    max-width: 35px;
+    padding: 2.5px;
+    margin-right: 0.5rem;
+}

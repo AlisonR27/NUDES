@@ -1,0 +1,44 @@
+.show-banner{
+    width:100%;
+    height:70vh;
+    background:#17224D;
+}
+.show-banner .show-banner-content{
+    z-index:10;
+    position: absolute;
+    max-width:70vw;
+    padding:25vh 2.5vw;
+    color:#eee;
+}
+.show-banner-content h1{
+    font-size:4em;
+    font-weight: bolder;
+}
+.show-banner .bg-img{
+    width:100%;
+    height:70vh;
+    position:absolute;
+    z-index:1;
+    object-fit: cover;
+    object-position: center;
+    filter:blur(5px);
+}
+.card img{
+    width:50%;
+    margin:auto;
+    padding: 2em auto;
+}
+.pesquisa .card{
+    transition:background, transform 600ms;
+}
+.pesquisa .card:hover{
+    background:#17224D;
+    color: #eee;
+    transform:scale(1.06);
+}
+.pesquisa .card:hover img{
+    filter:invert(1);
+}
+#categorias{
+    background:white;
+}
