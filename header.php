@@ -77,7 +77,7 @@ $blog_url = get_bloginfo('url');
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">
+                        <a href="pesquisadores" class="nav-link">
                             Pesquisadores
                         </a>
                     </li>
