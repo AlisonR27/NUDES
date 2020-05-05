@@ -29,6 +29,11 @@ $blog_url = get_bloginfo('url');
     <!-- Bootstrap -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <!-- <link href="<?//php echo $assets?>/css/fontawesome.min.css" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+
+    <!-- estilos -->
     <link href="<?php echo $assets?>/css/style.css" rel="stylesheet" type="text/css">
     <?php 
             if (is_front_page() && is_home()):?>
@@ -37,10 +42,23 @@ $blog_url = get_bloginfo('url');
 
 </head>
 <body>
+    <script>
+    $(function() {
+        $(document).scroll(function() {
+        var nav = $('header')[0];
+        $(nav).toggleClass("scrolled sticky-top", $(this).scrollTop() > $(nav).height());
+        $("#logo-navbar").toggleClass("normal");
+        });
+    });
+    </script>
+
     <header class="header">
         <nav class="navbar fixed-top navbar-expand-md justify-content-between  px-5 py-2">
             <a class="navbar-brand d-flex align-items-center" href="<?php echo $blog_url?>">
-                <img src="<?php echo $assets?>/imgs/flat-logo.png" alt="" class="img-fluid" id="navbar-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="184" height="184" viewBox="0 0 184 184" fill="none" >
+                <path d="M179.371 62.685C176.102 46.3456 167.396 31.595 154.671 20.8366C141.946 10.0782 125.953 3.94626 109.298 3.44H3.43994V62.48H3.64494V62.685H91.3316C91.6555 62.685 91.9794 62.685 92.3074 62.685C92.6354 62.685 92.9593 62.685 93.2832 62.685C100.67 62.8959 107.7 65.9108 112.945 71.1173C118.189 76.3238 121.255 83.3314 121.52 90.7167C121.536 91.1103 121.545 91.508 121.545 91.9098C121.545 92.3116 121.536 92.7093 121.52 93.1029V180.56H121.725V180.765H180.765V74.78C180.636 70.7167 180.17 66.671 179.371 62.685Z"/>
+                <path d="M62.48 121.52H48.3637H3.43994V180.56H3.64494V180.765H62.685V135.841V121.725H62.48V121.52Z"/>
+            </svg>
                 NUDES
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,6 +66,11 @@ $blog_url = get_bloginfo('url');
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="" class="nav-link">
+                            O núcleo
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a href="" class="nav-link">
                             Notícias
@@ -66,11 +89,6 @@ $blog_url = get_bloginfo('url');
                     <li class="nav-item">
                         <a href="" class="nav-link">
                             Projetos
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link">
-                            Sobre
                         </a>
                     </li>
                 </ul>

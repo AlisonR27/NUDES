@@ -1,27 +1,48 @@
 .show-banner{
     width:100%;
-    height:70vh;
     background:#17224D;
 }
+.show-banner .conteudo{
+    padding: 13rem 2rem;
+}
+.show-banner div{
+    display: inline-block;
+}
+.show-banner div:nth-child(1n):not(.cut){
+    z-index: 1010;
+    position: relative;
+}
+
+.show-banner .cut .bg{
+    position: absolute !important;
+    right:-15%;
+    top:-30%;
+    z-index: 1 !important;
+}
+.show-banner .cut{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    display: block;
+    top:0;
+    position: absolute;
+    z-index: 1 !important;
+
+}   
 .show-banner .show-banner-content{
     z-index:10;
-    position: absolute;
-    max-width:70vw;
-    padding:25vh 2.5vw;
+    max-width:60vw;
+    vertical-align: middle;
+    padding-right: 2rem;
     color:#eee;
 }
 .show-banner-content h1{
-    font-size:4em;
-    font-weight: bolder;
+    font-size:5em;
+    font-weight: 700;
 }
-.show-banner .bg-img{
-    width:100%;
-    height:70vh;
-    position:absolute;
-    z-index:1;
-    object-fit: cover;
-    object-position: center;
-    filter:blur(5px);
+
+.show-banner .logo{
+
 }
 .card img{
     width:50%;
@@ -29,12 +50,18 @@
     padding: 2em auto;
 }
 .pesquisa .card{
+    height:15vw !important;
+    border-radius: 8%;
     transition:background, transform 600ms;
+    backface-visibility: hidden;
+
+}
+.pesquisa .card *{
+    transform: translateZ(0);
 }
 .pesquisa .card:hover{
     background:#17224D;
     color: #eee;
-    transform:scale(1.06);
 }
 .pesquisa .card:hover img{
     filter:invert(1);

@@ -1,5 +1,5 @@
 html *{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 #main{
     padding-top: 3em;
@@ -7,12 +7,34 @@ html *{
 }
 /* Header */
 header a{
-    color:#f7f7f7 !important;
+    color:#f7f7f7 ;
+}
+header{
+    background-color:transparent;
+}
+.scrolled nav{
+    background-color:white !important;
+    box-shadow: 2px 0 5px rgba(0,0,0,.2);
+}
+.scrolled nav *{
+    color: #17224D !important;
+}
+.scrolled .btn{
+    filter: drop-shadow(1px 2px 3px rgba(0,0,0,.2));
+}
+.scrolled .navbar-brand svg{
+    fill:#17224D;
 }
 /* Logo do navbar */
-.navbar-brand img{
+.navbar-brand svg{
     max-height: 35px;
     max-width: 35px;
     padding: 2.5px;
     margin-right: 0.5rem;
+    fill:white;
+}
+footer{
+    background:#17224D;
+    color: #f7f7f7;
+    padding:40px 70px;
 }
