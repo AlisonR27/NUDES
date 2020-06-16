@@ -35,6 +35,14 @@ $blog_url = get_bloginfo('url');
 
     <!-- estilos -->
     <link href="<?php echo $assets?>/css/style.css" rel="stylesheet" type="text/css">
+                    <!--Css da página SOBRE-->
+                    <link href="<?php echo $assets?>assets\css\stylesobre.css" rel="stylesheet" type="text/css">
+                    <!--Css do carrossel-->
+    <link rel="stylesheet" href="<?php echo $assets?>assets\css\style-carrossel.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $assets?>assets\css\lightslider.css">
+                    <!-- JavaScript do carrossel-->
+    <script type="text/javascript" src="js\JQuery3.3.1.js" defer></script>
+    <script type="text/javascript" src="js\lightslider.js" defer></script>
     <?php 
             if (is_front_page() && is_home()):?>
     <link href="<?php echo $assets?>/css/index.css" rel="stylesheet" type="text/css">

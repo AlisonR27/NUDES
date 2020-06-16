@@ -1,0 +1,149 @@
+/*CSS PARA ESTILIZAR O CARROSSEL DA PÁGINA INICIAL
+FEITO POR: CAINAN VALENTIM
+*/
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(255, 255, 255);
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 100%;
+    height: 100vh;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box{
+    width: 318px;
+    height: 437px;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 20px 10px;
+
+}
+
+/*Css da imagem*/
+.imgBx{
+    height: 211px;   
+    width: 293px;
+
+}
+
+.model{
+max-height: 100%;
+max-width: 100%;
+border-radius: 10px;
+position: relative;
+top:20px;
+}
+
+.details{
+box-sizing: border-box;
+position: relative;
+top:-65px;
+}
+
+/*Css do título*/
+.details h3{
+    font-weight: bold;
+    font-size: 24px;
+    color: #17224D;
+}
+
+/*Css do span onde coloca o comentário das notícias*/
+.details span{
+    display: flex;
+    width: 260px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    font-family: Calibri;
+    font-weight: 300;
+    color: #000000;
+    font-size: 20px;
+    padding: 10px;
+}
+
+/*Css do botão "leia mais..."*/
+.details .btn-noticias{
+width: 135px;
+height: 36px;
+background: #17224D;
+border-radius: 50px;
+border: #FFFFFF;
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 28px;
+color: #FFFFFF;
+position: relative;
+top:-15px;
+
+}
+
+
+.box:hover{
+    background-color: #17224D;
+    transform-style: preserve-3d;
+    transform: scale(1.02);
+    transition: all ease 0.3s;
+}
+
+/*Hover do Titítulo. Obs.: Tentei colocar o titulo e o span no mesmo código, mas não deu certo, não sei o motivo AHSUAHSU*/
+.box:hover .details h3{
+    color: #FFFFFF;
+}
+
+/*Hover do span*/
+.box:hover .details span {
+    color: #FFFFFF;
+   
+}
+
+/*Hover do botão "leia mais..."*/
+.box:hover .details .btn-noticias{
+    background-color: #FFFFFF;
+    color:#17224D;
+}
+
+/*RESPONSIVIDADE DO CARROSSEL*/
+
+@media(max-width:720px){
+    .box{
+        width: 94%;
+        height: 400px;
+    }
+    .model{
+        height:90% ;
+        position: relative;
+        left: 3px;
+    }
+    .details h3{
+        font-size: 18px;
+
+    }
+    .details span{
+        font-size: 16px;
+    }
+    .details .btn-noticias{
+        width: 100px;
+        height: 26px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
