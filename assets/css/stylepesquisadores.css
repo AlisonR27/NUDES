@@ -1,0 +1,45 @@
+
+/*Página pesquisadores*/
+
+body{
+    background-color:#EEEEEE;        
+    font-family: Segoe UI;
+
+}
+
+h1{
+    font-size: 25px;
+}
+
+.box{
+float: left;
+width: 35%;
+padding: 5%;
+border-radius: 20px;
+
+}
+
+.texto{
+margin-left: 200px;
+
+}
+.box:last-child {
+background: white;
+}
+.circle {
+background-color: #aaa;
+border-radius: 50%;
+width: 150px;
+height: 150px;
+overflow: hidden;
+position: relative;
+float: left;
+}
+
+.circle img {
+position: absolute;
+bottom: 0;
+width: 100%;
+}
+
+/*Fim da página de pesquisadores*/
