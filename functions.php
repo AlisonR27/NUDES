@@ -2,7 +2,7 @@
 <?php
 /* FUNÇÃO PARA CRIAR TIPOS DE POST PELO PHP */
 if (is_admin() ) {
-  function defaultPostTypesArgs($nome,$nomeSingular){
+  function defaultPostTypesArgs($nome,$nomeSingular,$menuIcon){
     return array(
       'labels' => array(
         'name' => _x($nome, 'post type general name'),
@@ -12,6 +12,7 @@ if (is_admin() ) {
       'publicly_queryable' => true,
       'show_ui' => true,
       'show_in_menu' => true,
+      'menu_icon' => $menuIcon, 
       'query_var' => true,
       'rewrite' => true,
       'capability_type' => 'post',
@@ -20,7 +21,7 @@ if (is_admin() ) {
       'supports' => array('title','editor', 'thumbnail')
     );
   }   
-register_post_type('pesquisadores', defaultPostTypesArgs('Pesquisadores','Pesquisador'));
+register_post_type('pesquisadores', defaultPostTypesArgs('Pesquisadores','Pesquisador','dashicons-groups'));
 }
 /* FUNÇÃO PARA CRIAR PÁGINAS PELO PHP */
 if (is_admin() ) {
