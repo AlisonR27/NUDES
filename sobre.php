@@ -7,9 +7,7 @@ $url = get_bloginfo('url');
 
 <section class="portfolio" id="portfolio">
     <div class="container">
-        <div class="section-heading">
-            <h1>Sobre o Núcleo</h1>
-        </div>
+        <h1 class="display-4">Sobre o Núcleo</h1>
         <!-- port1 -->
         <div class="portfolio-item">
             <div class="portfolio-img" >
