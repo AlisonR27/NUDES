@@ -1,7 +1,6 @@
 <?php get_header(); 
 /*
-Template Name: Pesquisadores
-Template Post Type: Page
+Template Name: pesquisadores
 */
 
 $url = get_bloginfo('url');
@@ -19,9 +18,6 @@ $url = get_bloginfo('url');
         ?>
         <div> 
             <div>
-                <div class="circle">
-                    <img src="https://i.stack.imgur.com/atUuf.png">            
-                </div>
                 <?php the_post_thumbnail('medium', array('class' => 'mx-auto mt-3 d-block  rounded-circle', 'itemprop' => 'image', 'style' => 'height:150px;width:150px;object-fit:cover')) ?>
                     <div class="card-body text-justify px-5 mb-2">
                     <h3 ><?php the_title();?></h3>                   

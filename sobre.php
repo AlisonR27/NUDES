@@ -1,7 +1,6 @@
 <?php get_header(); 
 /*
 Template Name: Sobre
-Template Post Type: Page
 */
 $url = get_bloginfo('url');
 ?>

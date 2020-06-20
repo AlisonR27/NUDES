@@ -1,8 +1,8 @@
 </div>
 <footer>
     <div class="container border-bottom">
-        <div class="row mx-0 pb-5">
-            <div class="col-6">
+        <div class="row flex-column-reverse flex-sm-row mx-0 pb-5">
+            <div class="col-12 col-sm-6">
                 <div class="d-flex flex-column h-100 justify-content-end font-weight-light">
                     <div>
                         <div class="d-block my-2"><i class="far fa-envelope"></i> nucleo-nudes@ifrn.edu.br</div>
@@ -11,7 +11,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6">
+            <hr class="w-100 border-secondary my-4 d-block d-sm-none">
+            <div class="col-12 col-sm-6">
                 <h3 class="h3 mb-4">Contato</h3>
                 <form action="">
                 <div class="form-group">

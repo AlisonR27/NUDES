@@ -1,63 +1,91 @@
-.show-banner{
-    width:100%;
-    background:#17224D;
+#Apresentacao #content{
+    animation: present-text;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
 }
-.show-banner .conteudo{
-    padding: 13rem 2rem;
+@keyframes present-text{
+    0%{
+        margin-left:-100vw;
+    }
+    100%{
+        margin-left:0px;
+    }
 }
-.show-banner div{
-    display: inline-block;
-}
-.show-banner div:nth-child(1n):not(.cut){
-    z-index: 1010;
-    position: relative;
-}
-
-.show-banner .cut .bg{
-    position: absolute !important;
-    right:-15%;
-    top:-30%;
-    z-index: 1 !important;
-}
-.show-banner .cut{
-    width:100%;
-    height:100%;
-    overflow: hidden;
-    display: block;
-    top:0;
+#Apresentacao .animate-svg svg{
     position: absolute;
-    z-index: 1 !important;
-
-}   
-.show-banner .show-banner-content{
-    z-index:10;
-    max-width:60vw;
-    vertical-align: middle;
-    padding-right: 2rem;
-    color:#eee;
+    width:50vw;
+    top:-20vh;
+    right:-20vw;
 }
-.show-banner-content h1{
-    font-size:5em;
-    font-weight: 700;
+#Apresentacao .animate-svg svg rect{
+    fill:#1E2A5A;
+    rx:75.6327px;
+    width:488.007px;
+    height: 151.265px;  
 }
-
-.show-banner .logo{
-
+#Apresentacao #rect1{
+    animation-name:rect1;
+    animation-duration:1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
 }
-.card img{
-    width:50%;
-    margin:auto;
-    padding: 2em auto;
+#Apresentacao #rect2{
+    animation-name:rect2;
+    animation-duration:800ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
 }
-.pesquisa .card{
-    height:15vw !important;
-    border-radius: 8%;
-    transition:background, transform 600ms;
-    backface-visibility: hidden;
-
+#Apresentacao #rect3{
+    animation-name:rect3;
+    animation-duration:1.1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
 }
-.pesquisa .card *{
-    transform: translateZ(0);
+#Apresentacao #rect4{
+    animation-name:rect4;
+    animation-duration:1.2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+@keyframes  rect1{
+    0%{
+        x:3000;
+        y:0;
+    }
+    100%{
+        x:166;
+        y:260;
+    }
+}
+@keyframes  rect2{
+    0%{
+        y:300;
+        x:1000;
+    }
+    100%{
+        y:570;
+        x:0;
+    }
+}
+@keyframes  rect3{
+    0%{
+        x:5000;
+        y:0;
+    }
+    100%{
+        x:295;
+        y:627;
+    }
+}
+@keyframes  rect4{
+    0%{
+        x: 7000;
+        y:0;
+    }
+    100%{
+        x:435;
+        y:305;
+    }
 }
 .pesquisa .card:hover{
     background:#17224D;
@@ -65,6 +93,9 @@
 }
 .pesquisa .card:hover img{
     filter:invert(1);
+}
+.pesquisa .card img{
+    height:150px;
 }
 #categorias{
     background:white;
