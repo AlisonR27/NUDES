@@ -15,6 +15,7 @@ header a{
 header{
     background-color:transparent;
 }
+
 .scrolled nav{
     background-color:white !important;
     box-shadow: 2px 0 5px rgba(0,0,0,.2);
@@ -27,6 +28,10 @@ header{
 }
 .scrolled .navbar-brand svg{
     fill:#17224D;
+}
+.unscroll {
+    background-color: #17224D !important;
+    box-shadow: 2px 0 5px rgba(0,0,0,.2);
 }
 /* Logo do navbar */
 .navbar-brand svg{

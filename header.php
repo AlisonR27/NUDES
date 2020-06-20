@@ -63,7 +63,7 @@ $blog_url = get_bloginfo('url');
     </script>
 
     <header class="header">
-        <nav class="navbar fixed-top navbar-expand-md justify-content-between  px-5 py-2">
+        <nav class="navbar  navbar-expand-md justify-content-between px-5 py-2<?php if(!is_home()) echo ' unscroll '; else echo ' fixed-top '?>">
             <a class="navbar-brand d-flex align-items-center" href="<?php echo $blog_url?>">
             <svg xmlns="http://www.w3.org/2000/svg" width="184" height="184" viewBox="0 0 184 184" fill="none" >
                 <path d="M179.371 62.685C176.102 46.3456 167.396 31.595 154.671 20.8366C141.946 10.0782 125.953 3.94626 109.298 3.44H3.43994V62.48H3.64494V62.685H91.3316C91.6555 62.685 91.9794 62.685 92.3074 62.685C92.6354 62.685 92.9593 62.685 93.2832 62.685C100.67 62.8959 107.7 65.9108 112.945 71.1173C118.189 76.3238 121.255 83.3314 121.52 90.7167C121.536 91.1103 121.545 91.508 121.545 91.9098C121.545 92.3116 121.536 92.7093 121.52 93.1029V180.56H121.725V180.765H180.765V74.78C180.636 70.7167 180.17 66.671 179.371 62.685Z"/>
