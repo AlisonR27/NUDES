@@ -141,13 +141,7 @@ footer textarea::placeholder{
     font-size: 12px;
     color: rgba(255,255,255,.7);
 }
-.card {
-    max-height:60vh !important;
-    height:200px !important;
-}
-.card-noticias-lg {
-    height:calc(400px + 1rem)!important;
-}
+
 @media (min-width: 576px){
     html{
         font-size: 14px;

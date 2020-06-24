@@ -10,3 +10,10 @@
   filter:blur(15px) brightness(0.4);
   transform:scale(1.2);
 }
+.card {
+  max-height:60vh !important;
+  height:200px !important;
+}
+.card-noticias-lg {
+  height:calc(400px + 1rem)!important;
+}
