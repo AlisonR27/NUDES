@@ -7,11 +7,13 @@ $url = get_bloginfo('url');
 
 <section class="portfolio" id="portfolio">
     <div class="container">
-        <h1 class="display-4">Sobre o Núcleo</h1>
+        <div class="section-heading">
+            <h1>Sobre o Núcleo</h1>
+        </div>
         <!-- port1 -->
         <div class="portfolio-item">
             <div class="portfolio-img" >
-                <img src="assets\imgs\Sobre1.png" alt="">
+                <img src="<?php echo get_bloginfo('template_url').'/assets'?>\imgs\Sobre1.png" alt="" style="border-radius: 50%;box-shadow: 0 0 10px #999999;">
             </div>
             <div class="portfolio-description">
                 <h1>Criação do NUDES</h1>
@@ -22,11 +24,10 @@ $url = get_bloginfo('url');
                   conhecimentos apresentados em sala de aula.</p>
             </div>
         </div>
-        <!-- /port1 -->
+        <!-- /port1 --> 
 
 
         <!-- port2 -->
-     
         <div class="portfolio-item">
             <div class="portfolio-description">
                 <h1>Objetivo</h1>
@@ -40,7 +41,7 @@ $url = get_bloginfo('url');
                 entre ensino, pesquisa e extensão. </p>
             </div>
             <div class="portfolio-img" >
-                <img src="assets\imgs\Sobre2.png" alt="">
+                <img  src="<?php echo get_bloginfo('template_url').'/assets'?>\imgs\Sobre2.png" alt="" style="border-radius: 50%;box-shadow: 0 0 10px #999999;">
             </div>
         </div>
         <!-- /port2 -->
@@ -49,7 +50,7 @@ $url = get_bloginfo('url');
         <!-- port3 -->
             <div class="portfolio-item">
                 <div class="portfolio-img" >
-                    <img src="assets\imgs\Sobre3.png" alt="">
+                    <img id="img-portfolio" src="<?php echo get_bloginfo('template_url').'/assets'?>\imgs\Sobre3.png" alt="" style="border-radius: 50%;box-shadow: 0 0 10px #999999;">
                 </div>
                 <div class="portfolio-description">
                     <h1>Projetos</h1>

@@ -5,7 +5,9 @@ Template Name: pesquisadores
 
 $url = get_bloginfo('url');
 ?>
-<h2 class="mt-3 text-center">Conheça nossos pesquisadores</h2>
+<div class="section-heading">
+  <h1>Conheça nossos pesquisadores</h1>
+</div>
 <div class="card-deck pesquisadores-deck px-4 mb-5">
 <?php
         $minha_query = new WP_Query(array(
