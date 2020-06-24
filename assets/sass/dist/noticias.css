@@ -1,0 +1,16 @@
+.card .blurry {
+  -webkit-filter: blur(4px) brightness(1.5);
+          filter: blur(4px) brightness(1.5);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.card:hover .blurry {
+  -webkit-filter: blur(15px) brightness(0.4);
+          filter: blur(15px) brightness(0.4);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+/*# sourceMappingURL=noticias.css.map */

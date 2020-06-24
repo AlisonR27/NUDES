@@ -2,7 +2,7 @@
 <?php
 /* FUNÇÃO PARA CRIAR TIPOS DE POST PELO PHP */
 if (is_admin() ) {
-  function defaultPostTypesArgs($nome,$nomeSingular,$menuIcon){
+    function defaultPostTypesArgs($nome,$nomeSingular,$menuIcon){
     return array(
       'labels' => array(
         'name' => _x($nome, 'post type general name'),
@@ -21,10 +21,8 @@ if (is_admin() ) {
       'supports' => array('title','editor', 'thumbnail')
     );
   }   
-register_post_type('pesquisadores', defaultPostTypesArgs('Pesquisadores','Pesquisador','dashicons-groups'));
-}
+  register_post_type('pesquisadores', defaultPostTypesArgs('Pesquisadores','Pesquisador','dashicons-groups'));
 /* FUNÇÃO PARA CRIAR PÁGINAS PELO PHP */
-if (is_admin() ) {
   require_once( ABSPATH . 'wp-admin/includes/post.php' );
   if ( !function_exists( 'PostCreator' ) ) {
     function PostCreator($name, $type, $content, $category, $template, $author_id, $status){
@@ -61,7 +59,12 @@ if (is_admin() ) {
     }
   /*CRIAÇÃO DAS PÁGINAS DEFAULT*/
   //PostCreator( 'TITLE' , 'POST TYPE' , 'POST CONTENT' , 'POST CATEGORY' , 'TEMPLATE FILE NAME' , 'AUTHOR ID NUMBER' , 'POST STATUS');
-  PostCreator( 'Pesquisadores', 'page', '','','pesquisadores.php','','PUBLISH');
+  PostCreator( 'Pesquisadores', 'page', '','','pesquisadores','','PUBLISH');
   PostCreator( 'Sobre', 'page', '','','sobre','','PUBLISH');
+  PostCreator( 'Notícias', 'page', '','','noticias','','PUBLISH');
   }
+  //Adiciona as categorias 
+  wp_insert_term('Notícias', /*NÃO MUDE ISSO, define o tipo de termo*/'category', array(/*O que usar na url como slug para busca*/'slug' => 'Noticias',  ));
+  wp_insert_term('Projetos', /*NÃO MUDE ISSO, define o tipo de termo*/'category', array(/*O que usar na url como slug para busca*/'slug' => 'Projetos',  ));
+  wp_insert_term('Eventos', /*NÃO MUDE ISSO, define o tipo de termo*/'category', array(/*O que usar na url como slug para busca*/'slug' => 'Eventos',  ));
 }

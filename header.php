@@ -1,4 +1,9 @@
 <?php 
+
+function tirarAcentos($string){
+    return preg_replace(array("/(á|à|ã|â|ä)/","/(Á|À|Ã|Â|Ä)/","/(é|è|ê|ë)/","/(É|È|Ê|Ë)/","/(í|ì|î|ï)/","/(Í|Ì|Î|Ï)/","/(ó|ò|õ|ô|ö)/","/(Ó|Ò|Õ|Ô|Ö)/","/(ú|ù|û|ü)/","/(Ú|Ù|Û|Ü)/","/(ñ)/","/(Ñ)/"),explode(" ","a A e E i I o O u U n N"),$string);
+}
+
 $assets = get_bloginfo('template_url').'/assets';
 $blog_url = get_bloginfo('url');
 ?>
@@ -27,7 +32,7 @@ $blog_url = get_bloginfo('url');
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="<?php echo $assets ?>/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo $assets ?>/sass/bootstrap/dist/bootstrap.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <!-- Font Awesome -->
     <!-- <link href="<?//php echo $assets?>/css/fontawesome.min.css" rel="stylesheet" type="text/css"> -->
@@ -39,26 +44,23 @@ $blog_url = get_bloginfo('url');
         <link rel="stylesheet" href="<?php echo $assets?>\css\style-carrossel.css">
         <link rel="stylesheet" type="text/css" href="<?php echo $assets?>\css\lightslider.css">
         <!-- JavaScript do carrossel-->
-        <script type="text/javascript" src="<?php echo $assets?>js\JQuery3.3.1.js" defer></script>
-        <script type="text/javascript" src="<?php echo $assets?>js\lightslider.js" defer></script>
+        <script type="text/javascript" src="<?php echo $assets?>\js\lightslider.js" defer></script>
+        <script type="text/javascript" src="<?php echo $assets?>\js\script.js" defer></script>
+    <script type="text/javascript" src="<?php echo $assets?>\js\script-carrossel.js" defer></script>
+
     <?php 
+    //LEMBRAR DE MUDAR O SASS PARA CSS
             if (is_front_page() && is_home()):?>
-                <link href="<?php echo $assets?>/css/index.css" rel="stylesheet" type="text/css">
+                <link href="<?php echo $assets?>/sass/dist/index.css" rel="stylesheet" type="text/css">
+                <link href="<?php echo $assets?>/sass/dist/style-carrossel.css" rel="stylesheet" type="text/css">
             <?php   else:?>
-                <link href="<?php echo $assets?>/css/<?php echo get_the_title()?>.css" rel="stylesheet" type="text/css">
+                <link href="<?php echo $assets?>/sass/dist/<?php echo tirarAcentos(get_the_title())?>.css" rel="stylesheet" type="text/css">
                 
     <?php endif;?>
 
 </head>
 <body>
     <script>
-    $(function() {
-        $(document).scroll(function() {
-        var nav = $('header')[0];
-        $(nav).toggleClass("scrolled sticky-top", $(this).scrollTop() > $(nav).height());
-        $("#logo-navbar").toggleClass("normal");
-        });
-    });
     </script>
 
     <header class="header">
@@ -74,38 +76,38 @@ $blog_url = get_bloginfo('url');
                     <path d="M156.893 25.16C155.96 25.16 155.167 24.8333 154.513 24.18C153.86 23.5267 153.533 22.7333 153.533 21.8V21.016H155.801V21.8C155.801 22.0987 155.904 22.36 156.109 22.584C156.333 22.7893 156.595 22.892 156.893 22.892H170.333C170.632 22.892 170.884 22.7893 171.089 22.584C171.313 22.36 171.425 22.0987 171.425 21.8V17.292C171.425 16.9933 171.313 16.7413 171.089 16.536C170.884 16.3307 170.632 16.228 170.333 16.228H156.893C155.96 16.228 155.167 15.9013 154.513 15.248C153.86 14.576 153.533 13.7827 153.533 12.868V8.36C153.533 7.42667 153.86 6.63333 154.513 5.98C155.167 5.32667 155.96 5 156.893 5H170.333C171.267 5 172.06 5.32667 172.713 5.98C173.367 6.63333 173.693 7.42667 173.693 8.36V9.144H171.425V8.36C171.425 8.06133 171.313 7.80933 171.089 7.604C170.884 7.38 170.632 7.268 170.333 7.268H156.893C156.595 7.268 156.333 7.38 156.109 7.604C155.904 7.80933 155.801 8.06133 155.801 8.36V12.868C155.801 13.1667 155.904 13.4187 156.109 13.624C156.333 13.8293 156.595 13.932 156.893 13.932H170.333C171.267 13.932 172.06 14.268 172.713 14.94C173.367 15.5933 173.693 16.3773 173.693 17.292V21.8C173.693 22.7333 173.367 23.5267 172.713 24.18C172.06 24.8333 171.267 25.16 170.333 25.16H156.893Z" />
                 </svg>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="sobre" class="nav-link">
+                        <a href="<?php echo get_bloginfo('url')?>/sobre" class="nav-link">
                             O núcleo
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">
+                        <a href="<?php echo get_bloginfo('url')?>/noticias" class="nav-link">
                             Notícias
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="pesquisadores" class="nav-link">
+                        <a href="<?php echo get_bloginfo('url')?>/pesquisadores" class="nav-link">
                             Pesquisadores
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">
+                        <a href="<?php echo get_bloginfo('url')?>/pesquisa" class="nav-link">
                             Linhas de Pesquisa
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">
+                        <a href="<?php echo get_bloginfo('url')?>/projetos" class="nav-link">
                             Projetos
                         </a>
                     </li>
                 </ul>
-                <a href="" class="btn btn-light text-dark rounded-pill px-5 py-2 ml-3">Contato</a>
+                <a href="" class="btn btn-light rounded-pill px-5 py-2 ml-3">Contato</a>
             </div>
         </nav>
     </header>

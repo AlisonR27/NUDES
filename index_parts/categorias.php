@@ -1,6 +1,5 @@
 <section id="categorias" class="categorias py-5">
-		<div class="container">
-		<ul id="autoWidth" class="cs-hidden">
+		<ul id="autoWidth" class="cs-hidden mx-auto">
         <!--slider-1-------------->
         <li class="item-a">
         <div class="box">
@@ -60,5 +59,4 @@
             </div>
         </li>
     </ul>
-		</div>
 	</section>

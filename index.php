@@ -8,7 +8,7 @@ $assets = get_bloginfo('template_url').'/assets';
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 929 755" fill="none">
 					<rect id="rect1" transform="rotate(-32.1348 166 259.577)" fill="#1E2A5A"/>
 					<rect id="rect2" y="570.577" transform="rotate(-32.1348 0 570.577)" fill="#1E2A5A"/>
-					<rect id="rect3" x="294" y="626.577" transform="rotate(-32.1348 294 626.577)"/>
+					<rect id="rect3" x="294" y="626.577" transform="rotate(-32.1348 294 626.577)" fill="1E2A5A"/>
 					<rect id="rect4" x="435" y="304.577"  transform="rotate(-32.1348 435 304.577)" fill="#1E2A5A"/>
 				</svg>	
 			</div>	
@@ -34,6 +34,7 @@ $assets = get_bloginfo('template_url').'/assets';
 			</div>
 		</div>
 	</section>	
+
 	<?php require('index_parts/temasPesquisa.php')?>
 	<?php require('index_parts/categorias.php')?>
 	<div style="height:500px;">

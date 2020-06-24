@@ -6,10 +6,10 @@ Template Name: pesquisadores
 $url = get_bloginfo('url');
 ?>
 <h2 class="mt-3 text-center">Conheça nossos pesquisadores</h2>
-<div class="card-deck pesquisadores-deck px-4">
+<div class="card-deck pesquisadores-deck px-4 mb-5">
 <?php
         $minha_query = new WP_Query(array(
-          'posts_per_page' => 20,
+          'posts_per_page' => -1,
           'post_type' => 'pesquisadores'
         ));
 
@@ -20,7 +20,7 @@ $url = get_bloginfo('url');
         <div class="card rounded-lg flex-row col-12 col-md-6 col-lg-4">
           <?php the_post_thumbnail('medium', array('class' => 'mx-auto mt-3 d-block  rounded-circle', 'itemprop' => 'image', 'style' => 'height:150px;width:150px;object-fit:cover')) ?>
           <div class="card-body px-5 mb-2">
-            <h5 class="card-title text-primary"><?php the_title();?></h5>                   
+            <h5 class="card-title h5"><?php the_title();?></h5>                   
             <p><?php the_excerpt();?></p> 
             <p class="m-0"><?php echo  get_post_meta($post->ID, 'role', true); ?></p>
           </div>
@@ -30,3 +30,7 @@ $url = get_bloginfo('url');
         wp_reset_postdata();?>
                 
       </div>
+
+
+<?php
+get_footer();
