@@ -46,6 +46,7 @@ $blog_url = get_bloginfo('url');
         <link rel="stylesheet" type="text/css" href="<?php echo $assets?>\css\lightslider.css">
 
         <link href="<?php echo $assets?>/css/style-sobre.css" rel="stylesheet" type="text/css">
+        <link href="<?php echo $assets?>/css/style-contato.css" rel="stylesheet" type="text/css">
         <!-- JavaScript do carrossel-->
         <script type="text/javascript" src="<?php echo $assets?>\js\lightslider.js" defer></script>
         <script type="text/javascript" src="<?php echo $assets?>\js\script.js" defer></script>
@@ -110,7 +111,7 @@ $blog_url = get_bloginfo('url');
                         </a>
                     </li>
                 </ul>
-                <a href="" class="btn btn-light rounded-pill px-5 py-2 ml-3">Contato</a>
+                <a href="<?php echo get_bloginfo('url')?>/contato" class="btn btn-light rounded-pill px-5 py-2 ml-3">Contato</a>
             </div>
         </nav>
     </header>
