@@ -40,9 +40,12 @@ $blog_url = get_bloginfo('url');
 
     <!-- estilos -->
     <link href="<?php echo $assets?>/css/style.css" rel="stylesheet" type="text/css">
+    
         <!--Css do carrossel-->
         <link rel="stylesheet" href="<?php echo $assets?>\css\style-carrossel.css">
         <link rel="stylesheet" type="text/css" href="<?php echo $assets?>\css\lightslider.css">
+
+        <link href="<?php echo $assets?>/css/style-sobre.css" rel="stylesheet" type="text/css">
         <!-- JavaScript do carrossel-->
         <script type="text/javascript" src="<?php echo $assets?>\js\lightslider.js" defer></script>
         <script type="text/javascript" src="<?php echo $assets?>\js\script.js" defer></script>

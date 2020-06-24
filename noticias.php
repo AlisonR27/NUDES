@@ -26,7 +26,9 @@ if ($minha_query->have_posts()) :
   endwhile;
 
     ?>
-<h2 class="mt-4 text-center">Notícias</h2>
+<div class="section-heading">
+  <h1>Notícias</h1>
+</div>
 <div class="card-deck mt-5 pesquisadores-deck px-4">
     <div class="col-12 col-md-6 pr-0">
         <div class="card card-noticias-lg bg-dark text-white overflow-hidden rounded-0 mx-0">
