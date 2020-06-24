@@ -30,14 +30,11 @@ $assets = get_bloginfo('template_url').'/assets';
 						</div>
 					</div>
 				</div>
-				<div class="mt-auto"></div>
 			</div>
 		</div>
 	</section>	
 
 	<?php require('index_parts/temasPesquisa.php')?>
 	<?php require('index_parts/categorias.php')?>
-	<div style="height:500px;">
 
-	</div>
 <?php get_footer();?>
