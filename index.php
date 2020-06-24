@@ -13,6 +13,7 @@ $assets = get_bloginfo('template_url').'/assets';
 				</svg>	
 			</div>	
 			<div id="content" class="flex-column position-absolute d-flex h-100 w-100" style="z-index:2">
+				<div class="mb-auto"></div>
 				<div class="px-1 px-md-5 h-50 d-flex flex-column justify-content-center">
 					<div class="row mx-0">
 						<div class="offset-1 offset-md-0 col-10 col-md-8 col-xl-7">
@@ -29,6 +30,7 @@ $assets = get_bloginfo('template_url').'/assets';
 						</div>
 					</div>
 				</div>
+				<div class="mb-auto"></div>
 			</div>
 		</div>
 	</section>	
