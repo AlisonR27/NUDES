@@ -24,7 +24,7 @@
         prevHtml: '',
         nextHtml: '',
         rtl: false,
-        adaptiveHeight: false,
+        adaptiveHeight: true,
         vertical: false,
         verticalHeight: 500,
         vThumbWidth: 100,

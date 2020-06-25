@@ -1,6 +1,6 @@
 <?php get_header(); 
 /*
-Template Name: Página Contatos
+Template Name: contato
 */
 
 $url = get_bloginfo('url');

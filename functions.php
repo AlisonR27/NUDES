@@ -62,6 +62,8 @@ if (is_admin() ) {
   PostCreator( 'Pesquisadores', 'page', '','','pesquisadores','','PUBLISH');
   PostCreator( 'Sobre', 'page', '','','sobre','','PUBLISH');
   PostCreator( 'Notícias', 'page', '','','noticias','','PUBLISH');
+  PostCreator( 'Contato', 'page', '','','contato','','PUBLISH');
+  update_metadata('post_type',  url_to_postid(site_url('contato')), '_wp_page_template', 'contato' );
   }
   //Adiciona as categorias 
   wp_insert_term('Notícias', /*NÃO MUDE ISSO, define o tipo de termo*/'category', array(/*O que usar na url como slug para busca*/'slug' => 'Noticias',  ));

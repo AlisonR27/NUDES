@@ -38,7 +38,7 @@
         <div class="row mx-0 justify-content-between">
             <a  class="btn btn-link p-0 text-light">Voltar ao topo</a>
             <p class="text-light m-0">Núcleo de Desenvolvimento de Software - IFRN </p>
-            <a class="d-none d-md-block" href="/"><img src="<?php echo get_bloginfo('template_url').'/assets'?>/imgs/flat-logo.png" alt="" style="height:1em;"></a>
+            <a class="d-none d-md-block" href="<?php echo get_bloginfo('url');?>"><img src="<?php echo get_bloginfo('template_url').'/assets'?>/imgs/flat-logo.png" alt="" style="height:1em;"></a>
         </div>
     </div>
 </footer> 

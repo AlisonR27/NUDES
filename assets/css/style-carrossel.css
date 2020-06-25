@@ -15,7 +15,7 @@ a{
 
 .box{
     width: 300px;
-    height: 437px;
+    height: 430px;
     background-color: #EEEEEE;
     border-radius: 10px;
     display: flex;
@@ -24,10 +24,13 @@ a{
     justify-content: space-between;
     box-sizing: border-box;
     margin: 0 5px;
+    padding: 1em 0.5em;
     transition: all ease 0.3s;
 
 }
-
+.lightSlider{
+    padding-bottom: 0 !important;
+}
 
 
 .box:hover{
@@ -37,45 +40,29 @@ a{
 }
 
 /*Css da imagem*/
-.imgBx{
-    height: 211px;   
-    width: 293px;
-
-}
 
 .model{
-max-height: 100%;
-max-width: 100%;
-border-radius: 10px;
-position: relative;
-top:20px;
+    height: 200px;
+    border-radius: 10px;
+    width:100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .details{
-box-sizing: border-box;
-position: relative;
-top:-65px;
+    box-sizing: border-box;
+    padding: 1em 0.5em;
+    max-width:100%;
 }
 
 /*Css do título*/
 .details h3{
     font-weight: bold;
-    font-size: 24px;
     color: #17224D;
-}
-
-/*Css do span onde coloca o comentário das notícias*/
-.details span{
-    display: flex;
-    width: 260px;
+    width:100%;
     white-space: nowrap;
+    text-overflow: ellipsis;
     overflow: hidden;
-    text-overflow: ellipsis; 
-    font-family: Calibri;
-    font-weight: 300;
-    color: #000000;
-    font-size: 20px;
-    padding: 10px;
 }
 
 /*Css do botão "leia mais..."*/
@@ -105,7 +92,7 @@ top:-15px;
 }
 
 /*Hover do span*/
-.box:hover .details span {
+.box:hover .details p {
     color: #FFFFFF;
    
 }
@@ -124,9 +111,9 @@ top:-15px;
         height: 400px;
     }
     .model{
-        height:90% ;
-        position: relative;
-        left: 3px;
+        width:100%;
+        object-fit: cover;
+        object-position: center;
     }
     .details h3{
         font-size: 18px;

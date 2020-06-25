@@ -37,5 +37,4 @@ $assets = get_bloginfo('template_url').'/assets';
 
 	<?php require('index_parts/temasPesquisa.php')?>
 	<?php require('index_parts/categorias.php')?>
-
 <?php get_footer();?>
