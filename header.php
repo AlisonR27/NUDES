@@ -44,9 +44,6 @@ $blog_url = get_bloginfo('url');
         <!--Css do carrossel-->
         <link rel="stylesheet" href="<?php echo $assets?>\css\style-carrossel.css">
         <link rel="stylesheet" type="text/css" href="<?php echo $assets?>\css\lightslider.css">
-
-        <link href="<?php echo $assets?>/css/style-sobre.css" rel="stylesheet" type="text/css">
-        <link href="<?php echo $assets?>/css/style-contato.css" rel="stylesheet" type="text/css">
         <!-- JavaScript do carrossel-->
         <script type="text/javascript" src="<?php echo $assets?>\js\lightslider.js" defer></script>
         <script type="text/javascript" src="<?php echo $assets?>\js\script.js" defer></script>
@@ -68,7 +65,7 @@ $blog_url = get_bloginfo('url');
     </script>
 
     <header class="header">
-        <nav class="navbar  navbar-expand-md justify-content-between px-5 py-3<?php if(!is_home()) echo ' unscroll '; else echo ' fixed-top '?>">
+        <nav class="navbar  navbar-expand-lg justify-content-between px-5 py-3<?php if(!is_home()) echo ' unscroll '; else echo ' fixed-top '?>">
             <a class="navbar-brand d-flex align-items-center" href="<?php echo $blog_url?>">
                 <svg xmlns="http://www.w3.org/2000/svg" width="174" height="30" viewBox="0 0 174 30" fill="none">
                     <path d="M29.7642 10.0231C29.2111 7.25881 27.7382 4.76328 25.5854 2.94317C23.4326 1.12305 20.7269 0.0856483 17.9091 0H0V9.98844H0.0346821V10.0231H14.8696C14.9244 10.0231 14.9792 10.0231 15.0347 10.0231C15.0902 10.0231 15.145 10.0231 15.1998 10.0231C16.4495 10.0588 17.6388 10.5689 18.5261 11.4497C19.4134 12.3305 19.9321 13.5161 19.9769 14.7655C19.9797 14.8321 19.981 14.8994 19.981 14.9674C19.981 15.0354 19.9797 15.1027 19.9769 15.1692V29.9653H20.0116V30H30V12.0694C29.9783 11.3819 29.8994 10.6975 29.7642 10.0231Z" />
@@ -80,7 +77,7 @@ $blog_url = get_bloginfo('url');
                     <path d="M156.893 25.16C155.96 25.16 155.167 24.8333 154.513 24.18C153.86 23.5267 153.533 22.7333 153.533 21.8V21.016H155.801V21.8C155.801 22.0987 155.904 22.36 156.109 22.584C156.333 22.7893 156.595 22.892 156.893 22.892H170.333C170.632 22.892 170.884 22.7893 171.089 22.584C171.313 22.36 171.425 22.0987 171.425 21.8V17.292C171.425 16.9933 171.313 16.7413 171.089 16.536C170.884 16.3307 170.632 16.228 170.333 16.228H156.893C155.96 16.228 155.167 15.9013 154.513 15.248C153.86 14.576 153.533 13.7827 153.533 12.868V8.36C153.533 7.42667 153.86 6.63333 154.513 5.98C155.167 5.32667 155.96 5 156.893 5H170.333C171.267 5 172.06 5.32667 172.713 5.98C173.367 6.63333 173.693 7.42667 173.693 8.36V9.144H171.425V8.36C171.425 8.06133 171.313 7.80933 171.089 7.604C170.884 7.38 170.632 7.268 170.333 7.268H156.893C156.595 7.268 156.333 7.38 156.109 7.604C155.904 7.80933 155.801 8.06133 155.801 8.36V12.868C155.801 13.1667 155.904 13.4187 156.109 13.624C156.333 13.8293 156.595 13.932 156.893 13.932H170.333C171.267 13.932 172.06 14.268 172.713 14.94C173.367 15.5933 173.693 16.3773 173.693 17.292V21.8C173.693 22.7333 173.367 23.5267 172.713 24.18C172.06 24.8333 171.267 25.16 170.333 25.16H156.893Z" />
                 </svg>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" id="collapse" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
