@@ -56,24 +56,37 @@ footer{
     color: #f7f7f7;
     padding:20px 15px;
 }
+footer .nav-link{
+    color:#f7f7f7;
+}
+footer .nav-link:hover{
+    color:white;
+    text-shadow:0 0 2px white;
+}
 .display-2 {
     font-size: 2.5rem;
 }  
 #main{
     min-height:800px;
 }
-footer textarea{
+footer textarea,
+.contato-form textarea{
     height:4em;
     resize:none;
     background-color:transparent !important;
-    border: 1px solid #d9d9d9 !important;
+    border: 1px solid #d9d9d9;
     color: white !important;
 }
-footer textarea:focus{
+footer textarea:focus,
+.contato-form textarea:focus{
     border-color: white !important;
 }
-footer textarea::placeholder{
+footer textarea::placeholder,
+.contato-form textarea::placeholder{
     color: rgba(255,255,255,.6) !important;
+}
+.contato-form label{
+    color:white;
 }
 .form-label-group {
     position: relative;
@@ -94,6 +107,13 @@ footer textarea::placeholder{
 .form-label-group > input,
 .form-label-group > label {
     padding: var(--input-padding-y) var(--input-padding-x);
+}
+.form-label-group > input:required:invalid,
+.form-label-group > textarea:required:invalid {
+    border-color:#eb8787 !important;
+}
+.form-label-group *:invalid + label{
+    color:#ffdddd !important;
 }
 
 .form-label-group > label {

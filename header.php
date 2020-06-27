@@ -1,9 +1,15 @@
 <?php 
-
 function tirarAcentos($string){
     return preg_replace(array("/(á|à|ã|â|ä)/","/(Á|À|Ã|Â|Ä)/","/(é|è|ê|ë)/","/(É|È|Ê|Ë)/","/(í|ì|î|ï)/","/(Í|Ì|Î|Ï)/","/(ó|ò|õ|ô|ö)/","/(Ó|Ò|Õ|Ô|Ö)/","/(ú|ù|û|ü)/","/(Ú|Ù|Û|Ü)/","/(ñ)/","/(Ñ)/"),explode(" ","a A e E i I o O u U n N"),$string);
 }
 
+if (isset($_GET['mensagem'])){
+    $to = 'alisonranier@gmail.com';
+    $subject = $_GET['assunto'];
+    $message = $_GET['mensagem'];
+    $headers = 'From: '.$_GET['email'].'\r\n Reply-To: webmaster@example.com \r\n X-Mailer: PHP/'.phpversion();
+    echo wp_mail($to, $subject, $message, $headers);
+}
 $assets = get_bloginfo('template_url').'/assets';
 $blog_url = get_bloginfo('url');
 ?>
@@ -21,7 +27,7 @@ $blog_url = get_bloginfo('url');
                 echo '" | NUDES - IFRN';
             elseif (is_404()) : echo 'Oops! Página não encontrada';
             elseif (is_single()) : echo the_title();
-            else : echo bloginfo("name");
+            else : echo get_the_title();
             endif; 
         ?>
     </title>
@@ -55,7 +61,7 @@ $blog_url = get_bloginfo('url');
                 <link href="<?php echo $assets?>/sass/dist/index.css" rel="stylesheet" type="text/css">
                 <link href="<?php echo $assets?>/sass/dist/style-carrossel.css" rel="stylesheet" type="text/css">
             <?php   else:?>
-                <link href="<?php echo $assets?>/sass/dist/<?php echo tirarAcentos(get_the_title())?>.css" rel="stylesheet" type="text/css">
+                <link href="<?php echo $assets?>/sass/dist/<?php echo tirarAcentos(strtolower(get_the_title()))?>.css" rel="stylesheet" type="text/css">
                 
     <?php endif;?>
 

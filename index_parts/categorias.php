@@ -50,7 +50,7 @@
                         <span class="badge badge-pill badge-secondary mb-2"><?php echo $postagem['categoria']?></span>
                         <h3><?php echo $postagem['titulo']?></h3>
                         <p><?php echo wp_trim_words($postagem['excerpt'],18); ?></p>
-                        <a href="<?php echo $postagem['permalink']?>" class="btn btn-primary rounded-pill">LEIA MAIS...</a>
+                        <a href="<?php echo $postagem['permalink']?>" class="btn btn-primary rounded-pill stretched-link">LEIA MAIS...</a>
                     </div>
                 </div>
             </li>

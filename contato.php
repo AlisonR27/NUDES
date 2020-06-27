@@ -25,25 +25,29 @@ $url = get_bloginfo('url');
 			</div>
 		
 	</div>
-	<form action="" class="contato-form">
-		<div class="txtb">
-			<label>Nome</label>
-			<input type="text" placeholder="Nome">
-		</div>
-		<div class="txtb">
-			<label>E-mail</label>
-			<input type="email" placeholder="E-mail">
-		</div>
-		<div class="txtb">
-			<label>Assunto</label>
-			<input type="text" placeholder="Assunto">
-		</div>
-		<div class="txtb">
-			<label>Mensagem</label>
-			<textarea></textarea>
-		</div>
-		<a class="btn-contato">Enviar</a>
-	</form>
+	<div class="contato-form">
+	<form type="POST" action=".">
+                    <div class="form-label-group">
+                        <input type="text" class="form-control" placeholder="Nome" name="nome" id="nomeInput" autocomplete="off" required>
+                        <label for="nomeInput">Nome</label>
+                    </div>
+                    <div class="form-label-group">
+                        <input type="email" class="form-control" placeholder="Email" name="email" id="emailInput" autocomplete="off" required>
+                        <label for="emailInput">Email</label>
+                    </div>
+                    <div class="form-label-group">
+                        <input type="text" class="form-control" placeholder="Assunto" name="assunto" id="assuntoInput" autocomplete="off" required>
+                        <label for="assuntoInput">Assunto</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="pl-2">Mensagem:</label>
+                        <textarea id="exampleInputEmail4" class="form-control" name="mensagem" placeholder="Escreva aqui sua mensagem..." autocomplete="off" type="text" rows="5" required style="height:150px"></textarea>
+                    </div>
+                    <input type="Submit" value="Enviar e-mail" class="btn btn-outline-light">
+                </form>
+	</div>
 
 </div>
 </section>
+
+<?php get_footer();?>

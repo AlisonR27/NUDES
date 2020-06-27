@@ -1,5 +1,14 @@
 
 <?php
+add_action( 'phpmailer_init', 'mailer_config', 10, 1);
+function mailer_config(PHPMailer $mailer){
+  $mailer->IsSMTP();
+  $mailer->Host = "mail.telemar.it"; // your SMTP server
+  $mailer->Port = 25;
+  $mailer->SMTPDebug = 2; // write 0 if you don't want to see client/server communication in page
+  $mailer->CharSet  = "utf-8";
+}
+
 /* FUNÇÃO PARA CRIAR TIPOS DE POST PELO PHP */
 if (is_admin() ) {
     function defaultPostTypesArgs($nome,$nomeSingular,$menuIcon){
@@ -69,4 +78,9 @@ if (is_admin() ) {
   wp_insert_term('Notícias', /*NÃO MUDE ISSO, define o tipo de termo*/'category', array(/*O que usar na url como slug para busca*/'slug' => 'Noticias',  ));
   wp_insert_term('Projetos', /*NÃO MUDE ISSO, define o tipo de termo*/'category', array(/*O que usar na url como slug para busca*/'slug' => 'Projetos',  ));
   wp_insert_term('Eventos', /*NÃO MUDE ISSO, define o tipo de termo*/'category', array(/*O que usar na url como slug para busca*/'slug' => 'Eventos',  ));
-}
+  //Contem os dados para contato
+  //Se alterar o endereço, lembre-se de remover o atalho para o google maps no footer da pagina.
+  add_option('address', 'Avenida Senador Salgado Filho, 1559, Tirol, Natal-RN | 59015-000', '', 'yes' ); 
+  add_option('phone', '(84) 99090-9090', '', 'yes' );
+  add_option('contact_mail','Nucleo-nudes@ifrn.edu.br','','yes');
+  }
