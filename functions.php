@@ -66,13 +66,25 @@ if (is_admin() ) {
         wp_insert_post( $post_data, $error_obj );
       }
     }
+    function define_template( $page_name, $template_file_name ) {
+      $page = get_page_by_title( $page_name, OBJECT, 'page' );
+      $page_id = null == $page ? -1 : $page->ID;
+      if( -1 != $page_id ) {
+          update_post_meta( $page_id, '_wp_page_template', $template_file_name );
+      } 
+      return $page_id;
+    } 
+      
   /*CRIAÇÃO DAS PÁGINAS DEFAULT*/
   //PostCreator( 'TITLE' , 'POST TYPE' , 'POST CONTENT' , 'POST CATEGORY' , 'TEMPLATE FILE NAME' , 'AUTHOR ID NUMBER' , 'POST STATUS');
   PostCreator( 'Pesquisadores', 'page', '','','pesquisadores','','PUBLISH');
   PostCreator( 'Sobre', 'page', '','','sobre','','PUBLISH');
   PostCreator( 'Notícias', 'page', '','','noticias','','PUBLISH');
   PostCreator( 'Contato', 'page', '','','contato','','PUBLISH');
-  update_metadata('post_type',  url_to_postid(site_url('contato')), '_wp_page_template', 'contato' );
+  define_template( 'Pesquisadores', 'pesquisadores.php' );
+  define_template( 'Sobre', 'sobre.php' );
+  define_template( 'Notícias', 'noticias.php' );
+  define_template( 'Contato', 'contato.php' );
   }
   //Adiciona as categorias 
   wp_insert_term('Notícias', /*NÃO MUDE ISSO, define o tipo de termo*/'category', array(/*O que usar na url como slug para busca*/'slug' => 'Noticias',  ));

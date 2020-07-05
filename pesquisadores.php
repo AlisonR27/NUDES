@@ -4,18 +4,18 @@ Template Name: pesquisadores
 */
 
 $url = get_bloginfo('url');
+  $minha_query = new WP_Query(array(
+    'posts_per_page' => -1,
+    'post_type' => 'pesquisadores'
+  ));
+
+  if ($minha_query->have_posts()) :
 ?>
 <div class="section-heading">
   <h1>Conheça nossos pesquisadores</h1>
 </div>
 <div class="card-deck pesquisadores-deck px-4 mb-5">
-<?php
-        $minha_query = new WP_Query(array(
-          'posts_per_page' => -1,
-          'post_type' => 'pesquisadores'
-        ));
-
-        if ($minha_query->have_posts()) :
+      <?php
           $cont = 0;
           while ($minha_query->have_posts()) : $minha_query->the_post();
         ?> 
@@ -28,8 +28,9 @@ $url = get_bloginfo('url');
           </div>
         </div>
         <?php endwhile;
-        endif;
-        wp_reset_postdata();?>
+      else: require('common_parts/empty_list.php');
+    endif;
+      wp_reset_postdata();?>
                 
       </div>
 

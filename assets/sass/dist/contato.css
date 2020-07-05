@@ -21,86 +21,14 @@
 }
 h2{
     width: 100%;
-    margin-bottom: 80px;
     color: #17224D;
-    font-size: 55px;
+    font-size: 3em;
+    margin-bottom:1em;
 }
-.contato-info, .contato-form{
-    flex: 1;
-}
-.item{
- margin-bottom: 24px;
- font-size: 17px;
- color: #17224d;
-}
-.icon{
-    color: #17224D;
-    width: 30px;
-    height: 10px;
-    line-height: 10px;
-    margin-top:5.2em;
-}
-.contato-img img{
-    width: 350px;
-    margin-bottom: 24px;
-}
-.contato-form{
-    margin-right: 7em;
-    margin-top: -12em;
-    width: 85%;
-    max-width: 450px;
+section form{
+    width: 75%;
     background: #17224D;
     padding: 30px 40px;
     border-radius: 5px;
     box-shadow: 0 0 20px #000000b3;
-}
-
-.btn-contato{
-    display: inline-block;
-    border: 1px solid #ffffff;
-    padding: 14px 0;
-    color: #ffffff;
-    border-radius:5px;
-    text-transform: uppercase;
-    cursor: pointer;
-    margin-top: 8px;
-    width: 100%;
-}
-.btn-contato:hover{
-    background: #ffffff;
-    color: #17224D;
-}
-
-
-@media screen and (max-width:980px){
-    .contato-page{
-        max-width: 800px;
-    }
-    h2{
-        font-size: 4em;
-        margin-bottom: 40px;
-    }
-    .item{
-        margin-bottom: 24px;
-        font-size: 2em;
-       }
-
-    .contato-info{
-        flex: 100%;
-        margin-bottom: 30px;
-
-    }
-    .contato-form{
-    align-items: center;
-    margin-top: 5em;
-    width: 100%;
-    max-width: 2500px;
-
-    }
-    .txtb{
-        width: 100%;
-    }
-    .txtb input, .txtb textarea{
-        font-size: 25px;
-    }
 }

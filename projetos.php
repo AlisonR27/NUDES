@@ -1,13 +1,13 @@
 <?php get_header(); 
 /*
-Template Name: noticias 
+Template Name: projetos 
 
 */
 $query_array=array();
 $minha_query = new WP_Query(array(
     'posts_per_page' => 15,
     'post_type' => 'post',
-    'cat' => get_cat_ID('noticias')
+    'cat' => get_cat_ID('projetos')
 ));
 if ($minha_query->have_posts()) :
   $cont = 0;
@@ -26,7 +26,7 @@ if ($minha_query->have_posts()) :
 
     ?>
 <div class="section-heading">
-  <h1>Notícias</h1>
+  <h1>Projetos</h1>
 </div>
 <div class="card-deck mt-5 pesquisadores-deck px-4">
     <div class="col-12 col-md-6 pr-0">
