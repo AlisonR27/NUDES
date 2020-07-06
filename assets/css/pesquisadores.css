@@ -1,42 +1,40 @@
-/*Página pesquisadores*/
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,900");
-body{
-    background-color:#EEEEEE;        
-    font-family: "Roboto", sans-serif;
+@charset "UTF-8";
+.box {
+  float: left;
+  width: 35%;
+  padding: 5%;
+  border-radius: 20px;
+}
 
+.texto {
+  margin-left: 200px;
 }
-h1{
-    font-size: 25px;
-}
-.box{
-    float: left;
-    width: 35%;
-    padding: 5%;
-    border-radius: 20px;
-}
-.texto{
-    margin-left: 200px;
-}
+
 .box:last-child {
-    background: white;
-}
-.circle {
-    background-color: #aaa;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-    position: relative;
-    float: left;
+  background: white;
 }
 
-.circle img {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+.card img {
+  background-color: #d0d5da;
+  border: 3px solid #17224D;
 }
 
-.card h5,.card h4,.card h3{
-    color: 
+.card:hover img {
+  border-color: #ebedf0;
 }
+
+.card h5 {
+  color: #17224D;
+  font-weight: 500;
+}
+
+.card:hover {
+  background-color: #17224D;
+}
+
+.card:hover * {
+  color: #ebedf0;
+}
+
 /*Fim da página de pesquisadores*/
+/*# sourceMappingURL=pesquisadores.css.map */
