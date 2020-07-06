@@ -1,6 +1,7 @@
 
 <?php
 add_action( 'phpmailer_init', 'mailer_config', 10, 1);
+add_theme_support( 'post-thumbnails' );
 function mailer_config(PHPMailer $mailer){
   $mailer->IsSMTP();
   $mailer->Host = "mail.telemar.it"; // your SMTP server
@@ -96,3 +97,81 @@ if (is_admin() ) {
   add_option('phone', '(84) 99090-9090', '', 'yes' );
   add_option('contact_mail','Nucleo-nudes@ifrn.edu.br','','yes');
   }
+
+
+
+
+  /* AJAX PARA PAGINAS ARCHIVE */
+
+  function my_function_admin_bar(){ return false; }
+  add_filter( 'show_admin_bar' , 'my_function_admin_bar');
+  /*   INFINITE SCROLL PARA PÁGINA DE NOTÍCIAS    */
+  function ajax_script_load_more($args) {
+      //init ajax
+      $ajax = false;
+      //check ajax call or not
+      if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) &&
+          strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+          $ajax = true;
+      }
+      //number of posts per page default
+      $num=3;
+      //page number
+      $paged = $_POST['page'] + 1;
+      //args
+      $args = array(
+          'post_type' => 'post',
+          'cat' => get_cat_ID('noticias'),
+          'post_status' => 'publish',
+          'posts_per_page' =>$num,
+          'paged'=>$paged
+      );
+      //query
+      $query = new WP_Query($args);
+      //check
+      if ($query->have_posts()):
+          //loop articales
+          while ($query->have_posts()): $query->the_post();
+              //include articles template ?>
+              <div class="row mt-3">
+                <div class="card w-100 mb-3 mx-3">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                    <?php if ( has_post_thumbnail()):
+                    $featured_img_url = get_the_post_thumbnail_url($post->ID, 'large');
+                            echo '<img  src="'.$featured_img_url.'" class="img-fluid" itemprop="image">';
+                        else: echo '<img data-srcset="">';
+                    endif;
+                    ?>
+                    </div>
+                    <div class="col-md-8">
+                    <div class="card-body">
+                        <a href="#" class="h3 card-title stretched-link"><?php the_title();?></a>
+                        <p class="card-text text-secondary mb-0"><?php echo get_the_excerpt()?></p>
+                        <p class="card-text"><small class="text-muted">Publicado em: <?php echo get_the_date('d/m/Y') ?></small></p>
+                    </div>
+                    </div>
+                </div>
+                </div>
+</div>
+<?php
+          endwhile;
+      else:
+          echo 0;
+      endif;
+      //reset post data
+      wp_reset_postdata();
+      //check ajax call
+      if($ajax) die();
+  }
+  add_action('wp_ajax_nopriv_ajax_script_load_more', 'ajax_script_load_more');
+  add_action('wp_ajax_ajax_script_load_more', 'ajax_script_load_more');
+  
+  add_action( 'wp_enqueue_scripts', 'ajax_enqueue_script' );
+  /*
+  * enqueue js script call back
+  */
+  function ajax_enqueue_script() {
+     wp_enqueue_script( 'script_ajax', get_theme_file_uri( '/assets/script/ajax.js' ), array( 'jquery' ), '1.0', true );
+  }
+  

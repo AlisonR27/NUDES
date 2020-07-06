@@ -7,6 +7,11 @@
           animation-timing-function: ease-in-out;
 }
 
+#Apresentacao #bg-cutter{
+  width:100vw;
+  height:60vh;
+}
+
 @-webkit-keyframes present-text {
   0% {
     margin-left: -100vw;
@@ -189,3 +194,29 @@
   background: white;
 }
 /*# sourceMappingURL=index.css.map */
+
+
+@media (min-width: 576px) { 
+  #Apresentacao #bg-cutter{
+    width:100vw;
+    height:70vh;
+  }
+}
+
+@media (min-width: 768px) { 
+  #Apresentacao #bg-cutter{
+    width:100vw;
+    height:100vh;
+  }
+}
+
+@media (min-width: 992px) { 
+
+}
+
+@media (min-width: 1200px) { 
+  #Apresentacao #bg-cutter{
+    width:100vw;
+    height:80vh;
+  }
+}

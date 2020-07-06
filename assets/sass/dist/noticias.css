@@ -1,4 +1,4 @@
-.card .blurry {
+.card.news .blurry {
   -webkit-filter: blur(4px) brightness(1.5);
           filter: blur(4px) brightness(1.5);
   -webkit-transition: all 1s;
@@ -7,16 +7,16 @@
           transform: scale(1.1);
 }
 
-.card:hover .blurry {
+.card.news:hover .blurry {
   -webkit-filter: blur(15px) brightness(0.4);
           filter: blur(15px) brightness(0.4);
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-.card {
-    max-height:60vh !important;
-    height:200px !important;
+.card.news {
+    max-height:60vh;
+    height:200px;
 }
 .card-noticias-lg {
     height:calc(400px + 1rem)!important;

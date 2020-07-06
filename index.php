@@ -3,7 +3,7 @@ $assets = get_bloginfo('template_url').'/assets';
 
 ?>
 	<section id="Apresentacao" class="text-light">
-		<div class="vw-100 vh-100 bg-primary">
+		<div id="bg-cutter" class="bg-primary">
 			<div id="background" class="w-100 h-100 position-absolute animate-svg overflow-hidden" style="z-index:1;top:0;pointer-events:none;">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 929 755" fill="none">
 					<rect id="rect1" transform="rotate(-32.1348 166 259.577)" fill="#1E2A5A"/>
