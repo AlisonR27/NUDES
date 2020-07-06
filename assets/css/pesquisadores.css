@@ -8,11 +8,26 @@ body{
 h1{
     font-size: 25px;
 }
+
+.section-heading h1 {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 46px;
+    color: #17224D;
+    padding: 1em;
+}
+.card-body .card-title{
+    font-weight: bolder;
+    color: #17224D;
+}
+
 .box{
     float: left;
     width: 35%;
     padding: 5%;
-    border-radius: 20px;
+    border-radius: px;
 }
 .texto{
     margin-left: 200px;
@@ -38,5 +53,20 @@ h1{
 
 .card h5,.card h4,.card h3{
     color: 
+}
+
+@media screen and (max-width: 600px) {
+
+    .section-heading h1{
+      font-size: 2.5rem;
+    }  
+  
+  .d-block{
+    max-width: 100%;
+    }
+
+   .title-contato{
+       text-align: center;
+   } 
 }
 /*Fim da página de pesquisadores*/

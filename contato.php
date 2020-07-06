@@ -8,7 +8,7 @@ $url = get_bloginfo('url');
 <section class="container pt-3 pb-5 mb-5">
     <div class="row py-5">
         <div class="col-12 col-md-6">
-            <h2>Contate-nos</h2>
+            <h2 class="title-contato font-weight-bold">Contate-nos</h2>
             <img class="d-block" src="<?php echo $assets?>/imgs/Contato.png" alt="">
 
         </div>
@@ -27,7 +27,7 @@ $url = get_bloginfo('url');
                             <label for="assuntoInput">Assunto</label>
                         </div>
                         <div class="form-group">
-                            <label for="" class="pl-2">Mensagem:</label>
+                            <label for="" class="pl-2" style="color:#ffffff">Mensagem:</label>
                             <textarea id="exampleInputEmail4" class="form-control" name="mensagem" placeholder="Escreva aqui sua mensagem..." autocomplete="off" type="text" rows="5" required style="height:150px"></textarea>
                         </div>
                         <input type="Submit" value="Enviar e-mail" class="btn btn-outline-light">

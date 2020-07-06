@@ -84,8 +84,7 @@ top:-15px;
 }
 
 
-/*Hover do Titítulo. Obs.: Tentei colocar o titulo e o span no mesmo código, mas não deu certo, não sei o motivo AHSUAHSU*/
-/* pra colocar junto você tem que repetir o código, .box.hover .details h3,span não funciona :) */
+
 
 .box:hover .details h3{
     color: #FFFFFF;
