@@ -38,7 +38,7 @@ $blog_url = get_bloginfo('url');
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="<?php echo $assets ?>/sass/bootstrap/dist/bootstrap.css">
+    <link rel="stylesheet" href="<?php echo $assets ?>/bootstrap/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <!-- Font Awesome -->
     <!-- <link href="<?//php echo $assets?>/css/fontawesome.min.css" rel="stylesheet" type="text/css"> -->
@@ -46,7 +46,6 @@ $blog_url = get_bloginfo('url');
 
     <!-- estilos -->
     <link href="<?php echo $assets?>/css/style.css" rel="stylesheet" type="text/css">
-    <link href="<?php echo $assets?>/css/pesquisadores.css" rel="stylesheet" type="text/css">
     
         <!--Css do carrossel-->
         <link rel="stylesheet" href="<?php echo $assets?>\css\style-carrossel.css">
@@ -59,10 +58,10 @@ $blog_url = get_bloginfo('url');
     <?php 
     //LEMBRAR DE MUDAR O SASS PARA CSS
             if (is_front_page() && is_home()):?>
-                <link href="<?php echo $assets?>/sass/dist/index.css" rel="stylesheet" type="text/css">
-                <link href="<?php echo $assets?>/sass/dist/style-carrossel.css" rel="stylesheet" type="text/css">
+                <link href="<?php echo $assets?>/css/index.css" rel="stylesheet" type="text/css">
+                <link href="<?php echo $assets?>/css/style-carrossel.css" rel="stylesheet" type="text/css">
             <?php   else:?>
-                <link href="<?php echo $assets?>/sass/dist/<?php echo tirarAcentos(strtolower(get_the_title()))?>.css" rel="stylesheet" type="text/css">
+                <link href="<?php echo $assets?>/css/<?php echo tirarAcentos(strtolower(get_the_title()))?>.css" rel="stylesheet" type="text/css">
                 
     <?php endif;?>
 
@@ -72,7 +71,7 @@ $blog_url = get_bloginfo('url');
     </script>
 
     <header class="header">
-        <nav class="navbar  navbar-expand-lg justify-content-between px-5 py-3<?php if(!is_home()) echo ' unscroll '; else echo ' fixed-top '?>">
+        <nav class="navbar navbar-dark navbar-expand-lg justify-content-between px-5 py-3<?php if(!is_home()) echo ' unscroll '; else echo ' fixed-top '?>">
             <a class="navbar-brand d-flex align-items-center" href="<?php echo $blog_url?>">
                 <svg xmlns="http://www.w3.org/2000/svg" width="174" height="30" viewBox="0 0 174 30" fill="none">
                     <path d="M29.7642 10.0231C29.2111 7.25881 27.7382 4.76328 25.5854 2.94317C23.4326 1.12305 20.7269 0.0856483 17.9091 0H0V9.98844H0.0346821V10.0231H14.8696C14.9244 10.0231 14.9792 10.0231 15.0347 10.0231C15.0902 10.0231 15.145 10.0231 15.1998 10.0231C16.4495 10.0588 17.6388 10.5689 18.5261 11.4497C19.4134 12.3305 19.9321 13.5161 19.9769 14.7655C19.9797 14.8321 19.981 14.8994 19.981 14.9674C19.981 15.0354 19.9797 15.1027 19.9769 15.1692V29.9653H20.0116V30H30V12.0694C29.9783 11.3819 29.8994 10.6975 29.7642 10.0231Z" />
@@ -88,7 +87,7 @@ $blog_url = get_bloginfo('url');
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto text-center ">
                     <li class="nav-item">
                         <a href="<?php echo get_bloginfo('url')?>/sobre" class="nav-link">
                             O núcleo
@@ -115,7 +114,7 @@ $blog_url = get_bloginfo('url');
                         </a>
                     </li>
                 </ul>
-                <a href="<?php echo get_bloginfo('url')?>/contato" class="btn btn-light rounded-pill px-5 py-2 ml-3">Contato</a>
+                <a href="<?php echo get_bloginfo('url')?>/contato" class="btn btn-light rounded-pill px-5 py-2 d-block d-md-inherit mx-auto mx-md-0 ml-md-3">Contato</a>
             </div>
         </nav>
     </header>

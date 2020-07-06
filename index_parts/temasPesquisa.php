@@ -2,7 +2,7 @@
 	<section id="pesquisa" class="pesquisa py-5 bg-light">
 		<div class="container mt-1">
 			<h2 class="text-center h2 font-weight-bold mb-5">Áreas de Pesquisa</h2>
-			<div class="row row-cols-3">
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
 				<div class="col mb-4">
 					<div class="card">
 						<img src="<?php echo $assets?>/index/card1.svg" class="card-img-top p-3" alt="...">
