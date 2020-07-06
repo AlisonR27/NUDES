@@ -12,7 +12,6 @@ window.addEventListener("load",function() {
     $(nav).removeClass("scrolled sticky-top");
     $('#navbarCollapse').children('a.btn').addClass('btn-light').removeClass('btn-primary');
     $('.navbar-light').addClass('navbar-dark').removeClass('navbar-light');
-
   }
   });
 });
