@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #Apresentacao #content {
   -webkit-animation: present-text;
           animation: present-text;
@@ -225,6 +226,23 @@
     height:80vh;
   }
   #Apresentacao .animate-svg svg {
+=======
+
+#Apresentacao #content{
+    animation: present-text;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes present-text{
+    0%{
+        margin-left:-100vw;
+    }
+    100%{
+        margin-left:0px;
+    }
+}
+#Apresentacao .animate-svg svg{
+>>>>>>> e1e36b48886e1301597d29d9d7296ab503d07b9f
     position: absolute;
     top: -20vh;
     right: -20vw;

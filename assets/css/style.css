@@ -6,6 +6,10 @@ html{
     overflow-x:hidden;
     font-size:12px;
 }
+
+body{
+    background-color: #e5e5e5;
+}
 /* Header */
 header a{
     color:#f7f7f7 ;
@@ -171,6 +175,7 @@ footer textarea::placeholder,
     .display-2 {
         font-size: 3.5rem;
     }  
+
 }
 @media (min-width: 768px){
     footer{
@@ -189,6 +194,7 @@ footer textarea::placeholder,
     #main{
         min-height:600px;
     }
+
 }
 @media(min-width: 1200px){
 

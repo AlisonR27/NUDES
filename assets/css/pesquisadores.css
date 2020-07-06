@@ -10,8 +10,25 @@
   margin-left: 200px;
 }
 
-.box:last-child {
-  background: white;
+.section-heading h1 {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 46px;
+    color: #17224D;
+    padding: 1em;
+}
+.card-body .card-title{
+    font-weight: bolder;
+    color: #17224D;
+}
+
+.box{
+    float: left;
+    width: 35%;
+    padding: 5%;
+    border-radius: px;
 }
 
 .card img {
@@ -36,5 +53,18 @@
   color: #ebedf0;
 }
 
+@media screen and (max-width: 600px) {
+
+    .section-heading h1{
+      font-size: 2.5rem;
+    }  
+  
+  .d-block{
+    max-width: 100%;
+    }
+
+   .title-contato{
+       text-align: center;
+   } 
+}
 /*Fim da página de pesquisadores*/
-/*# sourceMappingURL=pesquisadores.css.map */

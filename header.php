@@ -46,6 +46,7 @@ $blog_url = get_bloginfo('url');
 
     <!-- estilos -->
     <link href="<?php echo $assets?>/css/style.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo $assets?>/css/pesquisadores.css" rel="stylesheet" type="text/css">
     
         <!--Css do carrossel-->
         <link rel="stylesheet" href="<?php echo $assets?>\css\style-carrossel.css">
