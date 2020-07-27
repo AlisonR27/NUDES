@@ -114,10 +114,10 @@ footer textarea::placeholder,
 }
 .form-label-group > input:required:invalid,
 .form-label-group > textarea:required:invalid {
-    border-color:#eb8787 !important;
+    border-color:white !important;
 }
 .form-label-group *:invalid + label{
-    color:#ffdddd !important;
+    color:#ffffff !important;
 }
 
 .form-label-group > label {
