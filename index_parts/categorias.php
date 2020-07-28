@@ -47,9 +47,9 @@
                 <div class="box">
                     <img src="<?php echo $postagem['imagem']?>" class="model">
                     <div class="details">
-                        <span class="badge badge-pill badge-secondary mb-2"><?php echo $postagem['categoria']?></span>
+                        <span class="badge badge-pill badge-secondary mb-1"><?php echo $postagem['categoria']?></span>
                         <h3><?php echo $postagem['titulo']?></h3>
-                        <p><?php echo wp_trim_words($postagem['excerpt'],18); ?></p>
+                        <p class="mb-1"><?php echo wp_trim_words($postagem['excerpt'],12); ?></p>
                         <a href="<?php echo $postagem['permalink']?>" class="btn btn-primary rounded-pill stretched-link">LEIA MAIS...</a>
                     </div>
                 </div>

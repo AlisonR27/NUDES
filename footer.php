@@ -1,13 +1,31 @@
+<?php 
+$assets = get_bloginfo('template_url').'/assets';
+?>
 </div>
 <footer>
     <div class="container">
         <div class="row mx-0 pb-5">
             <hr class="w-100 border-light my-5 d-block d-sm-none">
             <div class="col-12 col-sm-6 d-flex">
-                <ul class="<?php if(strtolower(get_the_title())=='contato') echo ' h-100 py-3 d-flex flex-column justify-content-between'; else echo 'align-self-end p-0'?>">
-                    <li><a class="my-2 btn-lg btn-link text-light pl-0" href="mailto:<?php echo get_option('contact_mail');?>" ><i class="far fa-envelope mr-2"></i><?php echo get_option('contact_mail');?></a></li>
-                    <li><a class="my-2 btn-lg btn-link text-light pl-0" href="tel:<?php echo get_option('phone');?>" ><i class="fas fa-phone mr-2"></i><?php echo get_option('phone');?></a></li>
-                    <li><a class="my-2 btn-lg btn-link text-light pl-0" href="https://goo.gl/maps/aeGitbN7WH9GNLH4A" target="_blank"><i class="fas fa-map-marked-alt mr-2"></i> <?php echo get_option('address');?></a></li>
+                <ul class="<?php if(strtolower(get_the_title())=='contato') echo 'fa-ul h-100 m-0 py-3 d-flex flex-column justify-content-between'; else echo 'align-self-end fa-ul m-0 p-0'?>">
+                    <li>
+                        <a class="my-2 btn-lg btn-link text-light pl-0" href="mailto:<?php echo get_option('contact_mail');?>">
+                            <img height="18px" class="mb-1" src="<?php echo $assets;?>/imgs/mail.png"/>
+                            <?php echo get_option('contact_mail');?>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="my-2 btn-lg btn-link text-light pl-0" href="tel:<?php echo get_option('phone');?>" >
+                            <img height="18px" class="mb-1" src="<?php echo $assets;?>/imgs/phone.png"/>
+                            <?php echo get_option('phone');?>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="my-2 btn-lg btn-link text-light pl-0" href="https://goo.gl/maps/aeGitbN7WH9GNLH4A" target="_blank">
+                            <img height="18px" class="mb-1" src="<?php echo $assets;?>/imgs/map.png"/>
+                            <?php echo get_option('address');?>
+                        </a>
+                    </li>
                 </ul>
             </div>
             <?php if(strtolower(get_the_title())=='contato'):?>

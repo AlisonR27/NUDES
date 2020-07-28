@@ -4,7 +4,7 @@
 }
 html{
     overflow-x:hidden;
-    font-size:12px;
+    font-size:14px;
 }
 
 body{
@@ -170,7 +170,7 @@ footer textarea::placeholder,
 }
 @media (min-width: 576px){
     html{
-        font-size: 14px;
+        font-size: 15px;
     }
     .display-2 {
         font-size: 3.5rem;
@@ -189,7 +189,7 @@ footer textarea::placeholder,
 }
 @media (min-width: 976px){
     html{
-        font-size: 14px;
+        font-size: 15px;
     }
     #main{
         min-height:600px;
@@ -197,5 +197,7 @@ footer textarea::placeholder,
 
 }
 @media(min-width: 1200px){
-
+    html{
+        font-size: 16px;
+    }
 }

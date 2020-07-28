@@ -93,7 +93,7 @@ if (is_admin() ) {
   wp_insert_term('Eventos', /*NÃO MUDE ISSO, define o tipo de termo*/'category', array(/*O que usar na url como slug para busca*/'slug' => 'Eventos',  ));
   //Contem os dados para contato
   //Se alterar o endereço, lembre-se de remover o atalho para o google maps no footer da pagina.
-  add_option('address', 'Avenida Senador Salgado Filho, 1559, Tirol, Natal-RN | 59015-000', '', 'yes' ); 
+  add_option('address', 'Avenida Senador Salgado Filho, 1559, Tirol, Natal-RN', '', 'yes' ); 
   add_option('phone', '(84) 99090-9090', '', 'yes' );
   add_option('contact_mail','Nucleo-nudes@ifrn.edu.br','','yes');
   }

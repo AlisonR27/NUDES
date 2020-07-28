@@ -41,7 +41,7 @@ $blog_url = get_bloginfo('url');
     <link rel="stylesheet" href="<?php echo $assets ?>/bootstrap/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <!-- Font Awesome -->
-    <!-- <link href="<?//php echo $assets?>/css/fontawesome.min.css" rel="stylesheet" type="text/css"> -->
+    <link href="<?php echo $assets?>/css/fontawesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
 
     <!-- estilos -->
@@ -114,7 +114,7 @@ $blog_url = get_bloginfo('url');
                         </a>
                     </li>
                 </ul>
-                <a href="<?php echo get_bloginfo('url')?>/contato" class="btn btn-light rounded-pill px-5 py-2 d-block d-md-inherit mx-auto mx-md-0 ml-md-3">Contato</a>
+                <a href="<?php echo get_bloginfo('url')?>/contato" class="btn btn-light rounded-pill px-5 py-2 d-block d-md-inherit mx-auto mx-md-0 ml-md-3">Contato<i class="far fa-comment-dots ml-2"></i></a>
             </div>
         </nav>
     </header>

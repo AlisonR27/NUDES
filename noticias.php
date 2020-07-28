@@ -1,7 +1,6 @@
 <?php get_header(); 
 /*
-Template Name: noticias 
-
+Template Name: noticias
 */
 $query_array=array();
 $minha_query = new WP_Query(array(
@@ -68,7 +67,7 @@ if ($minha_query->have_posts()) :
         </div>
         <div id="mais-noticias"></div> 
     </div>
-    <button class="btn btn-outline-primary mt-2" id="carregaMais" data-url="<?php echo admin_url("admin-ajax.php")?>" class="h3 pl-3 mt-4">Veja mais notícias</button>
+    <button class="btn btn-outline-primary mt-2" data-page="1" id="carregaMais" data-url="<?php echo admin_url("admin-ajax.php")?>" class="h3 pl-3 mt-4">Veja mais notícias</button>
     <?php elseif(count($query_array)>0):
          foreach($query_array as $postagem):?>
         <div class="mt-3">
@@ -94,10 +93,9 @@ if ($minha_query->have_posts()) :
     window.addEventListener('load',function(){
         $('#carregaMais').click(function(){
             console.log('entrou');
-          var that = $(this);
           var page = $(this).data('page');
           var newPage = page + 1;
-          var ajaxurl = that.data('url');
+          var ajaxurl = $(this).data('url');
           $.ajax({
               url: ajaxurl,
               type: 'post',

@@ -210,6 +210,10 @@
     width:100vw;
     height:100vh;
   }
+  .pesquisa .card{
+    height:220px;
+    border-radius:1.2em;
+  }
 }
 
 @media (min-width: 992px) { 
@@ -218,7 +222,10 @@
     top: -20vh;
     right: -20vw;
   }
-  
+  .pesquisa .card{
+    height:230px;
+    border-radius:1.2em;
+  }
 }
 
 @media (min-width: 1200px) { 
@@ -231,5 +238,8 @@
     top: -20vh;
     right: -20vw;
   }
-  
+  .pesquisa .card{
+    height:250px;
+    border-radius:1.2em;
+  }
 }
