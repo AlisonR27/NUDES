@@ -9,7 +9,7 @@ $url = get_bloginfo('url');
     <div class="row py-5">
         <div class="col-12 col-md-6">
             <h2 class="title-contato font-weight-bold">Contate-nos</h2>
-            <img class="d-block" src="<?php echo $assets?>/imgs/Contato.png" alt="">
+            <img class="img-fluid" src="<?php echo $assets?>/imgs/Contato.png" alt="" style="width:100%;">
 
         </div>
         <div class="col-12 col-md-6 pt-5 pl-5 justify-content-center">

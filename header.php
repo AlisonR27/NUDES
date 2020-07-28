@@ -114,7 +114,7 @@ $blog_url = get_bloginfo('url');
                         </a>
                     </li>
                 </ul>
-                <a href="<?php echo get_bloginfo('url')?>/contato" class="btn btn-light rounded-pill px-5 py-2 d-block d-md-inherit mx-auto mx-md-0 ml-md-3">Contato<i class="far fa-comment-dots ml-2"></i></a>
+                <a  href="<?php echo get_bloginfo('url')?>/contato" class="btn btn-light rounded-pill px-5 py-2 d-block d-md-inherit mx-auto mx-md-0 ml-md-3"><i class="far fa-envelope" style="width:0.5em;height:0.5em;padding-right:1.5em;align-items: center;"></i>Contato</a>
             </div>
         </nav>
     </header>
