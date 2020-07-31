@@ -87,10 +87,16 @@ $assets = get_bloginfo('template_url').'/assets';
         </div>
         <hr class="border-white">
         <div class="row mx-0 justify-content-between">
-            <a  class="btn btn-link p-0 text-light">Voltar ao topo</a>
-            <p class="text-light m-0">Núcleo de Desenvolvimento de Software - IFRN </p>
             <a class="d-none d-md-block" href="<?php echo get_bloginfo('url');?>"><img src="<?php echo get_bloginfo('template_url').'/assets'?>/imgs/flat-logo.png" alt="" style="height:1em;"></a>
+            <p class="text-light m-0">Núcleo de Desenvolvimento de Software - IFRN </p>
+            <a  href="#top" class="btn btn-link p-0 text-light"><i class=" icon-top fa fa-arrow-up" aria-hidden="true" style="align-items: center;padding-right:0.5em;"></i>Voltar ao topo</a>
         </div>
     </div>
 </footer> 
+<script>
+  $("a[href='#top']").click(function() {
+     $("html, body").animate({ scrollTop: 0 }, "slow");
+     return false;
+  });
+</script>
 </body>
