@@ -12,6 +12,7 @@ function mailer_config(PHPMailer $mailer){
 
 /* FUNÇÃO PARA CRIAR TIPOS DE POST PELO PHP */
 if (is_admin() ) {
+
     function defaultPostTypesArgs($nome,$nomeSingular,$menuIcon){
     return array(
       'labels' => array(
@@ -28,7 +29,7 @@ if (is_admin() ) {
       'capability_type' => 'post',
       'hierarchical' => false,
       'menu_position' => null,
-      'supports' => array('title','editor', 'thumbnail')
+      'supports' => array('title','editor', 'thumbnail', 'custom-fields')
     );
   }   
   register_post_type('pesquisadores', defaultPostTypesArgs('Pesquisadores','Pesquisador','dashicons-groups'));
@@ -82,15 +83,66 @@ if (is_admin() ) {
   PostCreator( 'Sobre', 'page', '','','sobre','','PUBLISH');
   PostCreator( 'Notícias', 'page', '','','noticias','','PUBLISH');
   PostCreator( 'Contato', 'page', '','','contato','','PUBLISH');
+  function insertPesquisador($title, $role){
+    if ($role != ''){
+      $post_id = wp_insert_post(
+        array(
+        'post_title'=>$title,
+        'post_type'=>'pesquisadores',
+        'post_content'=>$role,
+        'post_status'=> 'publish'
+        )
+      );
+      add_post_meta($post_id, 'lattes', '', true);
+    } else {
+      $post_id = wp_insert_post(
+        array(
+        'post_title'=>$title,
+        'post_type'=>'pesquisadores',
+        'post_content'=>'Pesquisador(a)',
+        'post_status'=> 'publish'
+        )
+      );
+      add_post_meta($post_id, 'lattes', '', true);
+    }
+  }
+ 
+  
+  //  insertPesquisador('Danielle Freitas', 'Vice-Coordenadora');
+  //  insertPesquisador('Cláudia Ribeiro', 'Coordenadora');
+  //  insertPesquisador('Plácido Souza Neto ', '');
+  //  insertPesquisador('Marília Freire ', '');
+  //  insertPesquisador('Fellipe Aleixo', '');
+  //  insertPesquisador('Leonardo Lucena', '');
+  //  insertPesquisador('Leonardo Minora', '');
+  //  insertPesquisador('Gilbert Azevedo', '');
+  //  insertPesquisador('George Azevedo', '');
+  //  insertPesquisador('Gracon Lima', '');
+  //  insertPesquisador('Hugo Melo', '');
+  //  insertPesquisador('Jorgiano Vidal', '');
+  //  insertPesquisador('Tell Moitas', '');
+  //  insertPesquisador('Demóstenes', '');
+  //  insertPesquisador('Helder Medeiros', '');
+  //  insertPesquisador('Sarah Thomaz', '');
+  //  insertPesquisador('Marcelo Fernandes', '');
+  //  insertPesquisador('Alessandro Souza', '');
+  //  insertPesquisador('Eduardo Brálio', '');
+  //  insertPesquisador('Fabiano Papaiz', '');
+  //  insertPesquisador('Silvia Matos', '');
+  //  insertPesquisador('Alexandre Lima', '');
+  
   define_template( 'Pesquisadores', 'pesquisadores.php' );
   define_template( 'Sobre', 'sobre.php' );
   define_template( 'Notícias', 'noticias.php' );
   define_template( 'Contato', 'contato.php' );
+
   }
   //Adiciona as categorias 
   wp_insert_term('Notícias', /*NÃO MUDE ISSO, define o tipo de termo*/'category', array(/*O que usar na url como slug para busca*/'slug' => 'Noticias',  ));
   wp_insert_term('Projetos', /*NÃO MUDE ISSO, define o tipo de termo*/'category', array(/*O que usar na url como slug para busca*/'slug' => 'Projetos',  ));
   wp_insert_term('Eventos', /*NÃO MUDE ISSO, define o tipo de termo*/'category', array(/*O que usar na url como slug para busca*/'slug' => 'Eventos',  ));
+
+
   //Contem os dados para contato
   //Se alterar o endereço, lembre-se de remover o atalho para o google maps no footer da pagina.
   add_option('address', 'Avenida Senador Salgado Filho, 1559, Tirol, Natal-RN', '', 'yes' ); 

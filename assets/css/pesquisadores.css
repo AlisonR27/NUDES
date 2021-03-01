@@ -15,10 +15,11 @@
     text-align: center;
     font-style: normal;
     font-weight: bolder;
-    font-size: 46px;
+    font-size: 32px;
     color: #17224D;
     padding: 1em;
 }
+
 .card-body .card-title{
     font-weight: bolder;
     color: #17224D;

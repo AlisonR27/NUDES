@@ -17,7 +17,7 @@ $assets = get_bloginfo('template_url').'/assets';
 				<div class="px-1 px-md-5 h-50 d-flex flex-column justify-content-center">
 					<div class="row h-100 mx-0">
 						<div class="offset-1 offset-md-0 col-10 col-md-8 col-xl-7">
-							<h1 class="display-2 text-left">
+							<h1 class="display-2 text-left mt-4 font-weight-bold">
 							NÚCLEO DE DESENVOLVIMENTO DE SOFTWARE DO IFRN
 							</h1>	
 						</div>
@@ -31,6 +31,9 @@ $assets = get_bloginfo('template_url').'/assets';
 					</div>
 				</div>
 				<div class="mb-auto"></div>
+					<div class="row justify-content-center mt-n5">
+						<div class="mouse"></div>
+					</div>
 			</div>
 		</div>
 	</section>	

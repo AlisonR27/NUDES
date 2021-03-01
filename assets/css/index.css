@@ -224,14 +224,14 @@
   }
   .pesquisa .card{
     height:230px;
-    border-radius:1.2em;
+    border-radius:1.2em;98
   }
 }
 
 @media (min-width: 1200px) { 
   #Apresentacao #bg-cutter{
     width:100vw;
-    height:80vh;
+    height:100vh;
   }
   #Apresentacao .animate-svg svg {
     position: absolute;
