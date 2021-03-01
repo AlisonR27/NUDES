@@ -107,29 +107,39 @@ if (is_admin() ) {
     }
   }
  
-  
-  //  insertPesquisador('Danielle Freitas', 'Vice-Coordenadora');
-  //  insertPesquisador('Cláudia Ribeiro', 'Coordenadora');
-  //  insertPesquisador('Plácido Souza Neto ', '');
-  //  insertPesquisador('Marília Freire ', '');
-  //  insertPesquisador('Fellipe Aleixo', '');
-  //  insertPesquisador('Leonardo Lucena', '');
-  //  insertPesquisador('Leonardo Minora', '');
-  //  insertPesquisador('Gilbert Azevedo', '');
-  //  insertPesquisador('George Azevedo', '');
-  //  insertPesquisador('Gracon Lima', '');
-  //  insertPesquisador('Hugo Melo', '');
-  //  insertPesquisador('Jorgiano Vidal', '');
-  //  insertPesquisador('Tell Moitas', '');
-  //  insertPesquisador('Demóstenes', '');
-  //  insertPesquisador('Helder Medeiros', '');
-  //  insertPesquisador('Sarah Thomaz', '');
-  //  insertPesquisador('Marcelo Fernandes', '');
-  //  insertPesquisador('Alessandro Souza', '');
-  //  insertPesquisador('Eduardo Brálio', '');
-  //  insertPesquisador('Fabiano Papaiz', '');
-  //  insertPesquisador('Silvia Matos', '');
-  //  insertPesquisador('Alexandre Lima', '');
+  function insertPesquisadores(){
+    $pesquisadores = array(
+      array('Danielle Freitas', 'Vice-Coordenadora'),
+      array('Cláudia Ribeiro', 'Coordenadora'),
+      array('Plácido Souza Neto ', ''),
+      array('Marília Freire ', ''),
+      array('Fellipe Aleixo', ''),
+      array('Leonardo Lucena', ''),
+      array('Leonardo Minora', ''),
+      array('Gilbert Azevedo', ''),
+      array('George Azevedo', ''),
+      array('Gracon Lima', ''),
+      array('Hugo Melo', ''),
+      array('Jorgiano Vidal', ''),
+      array('Tell Moitas', ''),
+      array('Demóstenes', ''),
+      array('Helder Medeiros', ''),
+      array('Sarah Thomaz', ''),
+      array('Marcelo Fernandes', ''),
+      array('Alessandro Souza', ''),
+      array('Eduardo Brálio', ''),
+      array('Fabiano Papaiz', ''),
+      array('Silvia Matos', ''),
+      array('Alexandre Lima', ''),
+    );
+    foreach($pesquisadores as $pesquisador){
+      $query = new WP_Query( array( 'post_type' => 'pesquisadores', 'post_title' => $pesquisador[0] ) );
+      if (!$query->have_posts()){
+        insertPesquisador($pesquisador[0],$pesquisador[1]);
+      }
+    }
+  }
+  insertPesquisadores();
   
   define_template( 'Pesquisadores', 'pesquisadores.php' );
   define_template( 'Sobre', 'sobre.php' );
