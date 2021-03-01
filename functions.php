@@ -108,34 +108,48 @@ if (is_admin() ) {
   }
  
   function insertPesquisadores(){
-    $pesquisadores = array(
-      array('Danielle Freitas', 'Vice-Coordenadora'),
-      array('Cláudia Ribeiro', 'Coordenadora'),
-      array('Plácido Souza Neto ', ''),
-      array('Marília Freire ', ''),
-      array('Fellipe Aleixo', ''),
-      array('Leonardo Lucena', ''),
-      array('Leonardo Minora', ''),
-      array('Gilbert Azevedo', ''),
-      array('George Azevedo', ''),
-      array('Gracon Lima', ''),
-      array('Hugo Melo', ''),
-      array('Jorgiano Vidal', ''),
-      array('Tell Moitas', ''),
-      array('Demóstenes', ''),
-      array('Helder Medeiros', ''),
-      array('Sarah Thomaz', ''),
-      array('Marcelo Fernandes', ''),
-      array('Alessandro Souza', ''),
-      array('Eduardo Brálio', ''),
-      array('Fabiano Papaiz', ''),
-      array('Silvia Matos', ''),
-      array('Alexandre Lima', ''),
-    );
-    foreach($pesquisadores as $pesquisador){
-      $query = new WP_Query( array( 'post_type' => 'pesquisadores', 'post_title' => $pesquisador[0] ) );
-      if (!$query->have_posts()){
-        insertPesquisador($pesquisador[0],$pesquisador[1]);
+    $fquery = new WP_Query(  array( 'post_type' => 'pesquisadores','posts_per_page' => -1) );
+    $total = $fquery->found_posts;
+    if ($total<23){
+      $pesquisadores = array(
+        array("Danielle Freitas", "Vice-Coordenador"),
+        array("Cláudia Ribeiro", "Coordenador"),
+        array("Plácido Souza Neto ", ""),
+        array("Marília Freire ", ""),
+        array("Fellipe Aleixo", ""),
+        array("Leonardo Lucena", ""),
+        array("Leonardo Minora", ""),
+        array("Gilbert Azevedo", ""),
+        array("George Azevedo", ""),
+        array("Gracon Lima", ""),
+        array("Hugo Melo", ""),
+        array("Jorgiano Vidal", ""),
+        array("Tell Moitas", ""),
+        array("Demóstenes", ""),
+        array("Helder Medeiros", ""),
+        array("Sarah Thomaz", ""),
+        array("Marcelo Fernandes", ""),
+        array("Alessandro Souza", ""),
+        array("Eduardo Brálio", ""),
+        array("Fabiano Papaiz", ""),
+        array("Silvia Matos", ""),
+        array("Alexandre Lima", ""),
+      );
+      foreach($pesquisadores as $pesquisador){
+        $args = array( 'post_type' => 'pesquisadores', 'post_title' => $pesquisador[0],'posts_per_page' => 1);
+        $query = new WP_Query($args);
+        if ($query->has_posts()){
+          $post = $query->the_post();
+          if ($post == null){
+            insertPesquisador($pesquisador[0],$pesquisador[1]);
+          }
+          else{
+            
+          }
+          wp_reset_postdata();
+        } else {
+          insertPesquisador($pesquisador[0],$pesquisador[1]);
+        }
       }
     }
   }
